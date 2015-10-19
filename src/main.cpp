@@ -61,9 +61,9 @@ int main(int argc, char** args){
 
     SDFCLmanager ac = SDFCLmanager();
 
-    if(perf_tests){
+    if(!perf_tests){
 
-        int example = 11; //Example to use, by default is 1
+        int example = 1; //Example to use, by default is 1
         if(argc < 2){
             cout<<"Please select an example from 1 to 6. Using "<< example <<" as default" << endl;
         }else{
@@ -71,8 +71,8 @@ int main(int argc, char** args){
         }
 
         //Selects the example we want to use
-        selectExample(example, &inputImage, &outputImage);
-        inputImage = (char*) "/home/olmozavala/Dropbox/TestImages/nifti/Basics/Gradient240.nii";
+        //selectExample(example, &inputImage, &outputImage);
+        inputImage = (char*) "./images/Gradient32.nii";
         //Without performance tests, (normal runs)
         return ac.run3dBuf((char*) inputImage, (char*) outputImage); //With buffers
     }else{

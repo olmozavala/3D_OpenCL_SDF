@@ -24,7 +24,7 @@ ifeq ($(config),release)
   TARGETDIR  = dist
   TARGET     = $(TARGETDIR)/SignedDistFunc
   DEFINES   += -DNDEBUG
-  INCLUDES  += -IOZlib -I/usr/include/nifti
+  INCLUDES  += -IOZlib -I/usr/include/nifti -I/usr/local/cuda/include -Isrc -Isrc/headers
   CPPFLAGS  += -MMD -MP $(DEFINES) $(INCLUDES)
   CFLAGS    += $(CPPFLAGS) $(ARCH) -O2
   CXXFLAGS  += $(CFLAGS) 
@@ -46,7 +46,7 @@ ifeq ($(config),debug)
   TARGETDIR  = dist
   TARGET     = $(TARGETDIR)/SignedDistFunc
   DEFINES   += -DSAVE
-  INCLUDES  += -IOZlib -I/usr/include/nifti
+  INCLUDES  += -IOZlib -I/usr/include/nifti -I/usr/local/cuda/include -Isrc -Isrc/headers
   CPPFLAGS  += -MMD -MP $(DEFINES) $(INCLUDES)
   CFLAGS    += $(CPPFLAGS) $(ARCH) -g
   CXXFLAGS  += $(CFLAGS) 

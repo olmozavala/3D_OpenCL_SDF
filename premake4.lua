@@ -18,8 +18,6 @@ solution "SignedDistFunc"
       includedirs{--My libraries
                   OZLIB,
                   NIFTI,
-                 -- GLM library for matrices
-                 GLM,
                   -- cl.h
                  OPENCL.."/include",
                  "src", "src/headers"
@@ -34,7 +32,7 @@ solution "SignedDistFunc"
       language "C++"
 
       -- Current project files
-      files {"**.h", "**.cpp" }     
+      files {"src/**.h", "src/**.cpp" }     
 
       links({"OpenCL","GL","GLU","glut","GLEW","X11","m","FileManager","niftiio",
           "GLManager","CLManager","ImageManager","GordonTimers","freeimage"})
