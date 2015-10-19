@@ -12,7 +12,7 @@ This project uses a couple of wrappers and utilities that are available
 at the OZlib repository. In order for this submodule to be added
 to your clone folder you need to do first your normal cloning:
 
-    git clone git@github.com:olmozavala/2D_OpenCL_SDF.git
+    git clone git@github.com:olmozavala/3D_OpenCL_SDF.git
 
 And then you cd into the folder and add the submodules with:
     
